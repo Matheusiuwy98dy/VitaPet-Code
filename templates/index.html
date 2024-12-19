@@ -1,0 +1,353 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VitaPet - Clínica Veterinária e Petshop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+  </head>
+  <body>
+
+    <!-- navbar com bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #6B8F24;">
+      <div class="container-fluid">
+          <!-- Nome da marca -->
+          <a class="navbar-brand" style="color: #FFFFFF;" href="#">VitaPet - Clínica Veterinária e Petshop</a>
+          
+          <!-- Botão para exibição no modo responsivo -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <!-- Links do menu -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link white-link" href="{{ url_for('tutor./cadastro') }}">Cadastro</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link white-link" href="{{ url_for('tutor./login') }}">Login</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link white-link" href="#">Contato</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  
+  <!-- História da VitaPet usando os 5 integrantes do grupo como protagonistas -->
+  <section id="VP-History">
+    <h1>A História da VitaPet</h1>
+    <div class="flex-container">
+      <div class="vp-h-p">
+        <p stlye="width: 50px;">Cinco alunos do IFPE que amam animais, fundaram a VitaPet com o objetivo de oferecer cuidados veterinários acessíveis a todos. A clínica nasceu pequena, mas com o tempo se tornou um ponto de referência na cidade de Jaboatão dos Guararapes. A VitaPet se destaca por oferecer serviços de qualidade, preços justos e um atendimento acolhedor.</p>
+      </div>
+      <div class="vp-h-p">
+        <p>Seus valores incluem amor aos animais, qualidade, acessibilidade e responsabilidade social. A missão da clínica é proporcionar saúde e bem-estar aos animais, fortalecendo o vínculo entre eles e seus tutores. A visão da VitaPet é ser referência em atendimento veterinário e promover a saúde animal na comunidade.</p>
+      </div>
+      <div class="vp-h-p">
+        <p>A VitaPet logo se tornou um refúgio para os animais de toda a região. A equipe, formada por profissionais apaixonados e competentes, trabalhava incansavelmente para oferecer o melhor atendimento aos seus pacientes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção que fala dos serviços: banho e tosa, análise clínica, Fisioterapia, tratamento com tecnologia de ponta -->
+  <section id="services">
+    <h1>Serviços Oferecidos pela VitaPet</h1>
+    <!-- Guarda os cards que mostram os serviços -->
+    <div  class="flex-container">
+      
+      <!-- Banho/Tosa com imagem e descrição -->
+      <div style="display: block;">
+        <div class="card border-0" style="width: 18rem; height: 410px;">
+          <img src="{{ url_for('static', filename='images/pet-bath.jpg') }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Banho e Tosa</h5>
+            <p class="card-text">Seu pet está precisando de um banho ou tosa? Cuidaremos dele para você!</p>
+            <a href="#" class="btn btn-primary">Marcar Banho/Tosa</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Análise Clínica com imagem e descrição -->
+      <div style="display: block;">
+        <div class="card border-0" style="width: 18rem; height: 410px;">
+          <img src="{{ url_for('static', filename='images/person-with-pet.jpg') }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Análise Clínica</h5>
+            <p class="card-text">Seu pet está machucado ou doente? Temos os melhores médicos veterinários da cidade</p>
+            <a href="#" class="btn btn-primary">Agendar consulta</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fisioterapia com imagem e descrição -->
+      <div style="displ ay: block;">
+        <div class="card border-0" style="width: 18rem; height: 410px;">
+          <img src="{{ url_for('static', filename='images/physio-pet.jpg') }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Fisioterapia</h5>
+            <p class="card-text">Seu pet está em tratamento de um trauma e precisa de Fisioterapia? Confira nossos preços</p>
+            <a href="#" class="btn btn-primary">Agendar sessão</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tratamento de Doenças com imagem e descrição -->
+      <div style="displ ay: block;">
+        <div class="card border-0" style="width: 18rem; height: 410px;">
+          <img src="{{ url_for('static', filename='images/treatment-pet.jpg') }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tratamento Com Tecnologia de Ponta</h5>
+            <p class="card-text">Seu pet estará em boas mãos com nossa equipe super preparada e nossa tecnologia de ponta!</p>
+            <a href="#" class="btn btn-primary">Saber mais</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Cirurgia com imagem e descrição -->
+      <div style="displ ay: block;">
+        <div class="card border-0" style="width: 18rem; height: 410px;">
+          <img src="{{ url_for('static', filename='images/pet-surgery.jpg') }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cirurgias</h5>
+            <p class="card-text">Oferecemos cirurgias marcadas e de urgência para seu pet com os melhores profissionais da região</p>
+            <a href="#" class="btn btn-primary">Agendar consulta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Seção que fala dos produtos vendidos: medicamentos, brinquedos, roupas, rações e acessórios -->
+  <section id="products">
+    <h1>Produtos Que Você Encontra na VitaPet</h1>
+    <!-- Guarda os cards que mostram os serviços -->
+    <section id="medicamentos">
+      <h2>Medicamentos</h2>
+      <div  class="flex-container">
+      
+        <!-- Banho/Tosa com imagem e descrição -->
+        <div style="display: block;">
+          <div class="card border-0" style="width: 18rem; height: 490px;">
+            <img src="{{ url_for('static', filename='images/vermifugo.jpeg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Vermífugos</h5>
+              <p class="card-text">Temos Vermífugos de todas as marcas, medidas, países e composições. Traga sua receita!</p>
+              <a href="#" class="btn btn-primary">Buscar mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Análise Clínica com imagem e descrição -->
+        <div style="display: block;">
+          <div class="card border-0" style="width: 18rem; height: 490px;">
+            <img src="{{ url_for('static', filename='images/antipulgas-e-carrapatos.jpeg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Antipulgas e Carrapatos</h5>
+              <p class="card-text">Seu pet está com pulgas ou carrapatos? Liberte-o desse tormento!</p>
+              <a href="#" class="btn btn-primary">Buscar mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fisioterapia com imagem e descrição -->
+        <div style="displ ay: block;">
+          <div class="card border-0" style="width: 18rem; height: 490px;">
+            <img src="{{ url_for('static', filename='images/antibiotico.jpeg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Antibióticos</h5>
+              <p class="card-text">Para toda e qualquer ocasião em que seu pet precisar, temos um antibiótico pronto!</p>
+              <a href="#" class="btn btn-primary">Buscar mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tratamento de Doenças com imagem e descrição -->
+        <div style="displ ay: block;">
+          <div class="card border-0" style="width: 18rem; height: 490px;">
+            <img src="{{ url_for('static', filename='images/anti-inflamatorio.png') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Anti-inflamatórios</h5>
+              <p class="card-text">Seu pet sofre com inflamações? Nós temos a solução para qualquer situação!</p>
+              <a href="#" class="btn btn-primary">Buscar mais</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Cirurgia com imagem e descrição -->
+        <div style="displ ay: block;">
+          <div class="card border-0" style="width: 18rem; height: 490px;">
+            <img src="{{ url_for('static', filename='images/cardiaco.jpeg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cardíacos</h5>
+              <p class="card-text">Seu pet tem insuficiência cardíaca? Nós temos todos os melhores medicamentos do mercado.</p>
+              <a href="#" class="btn btn-primary">Buscar mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="brinquedos">
+    <h2>Brinquedos</h2>
+    <div  class="flex-container">
+    
+      <!-- Banho/Tosa com imagem e descrição -->
+      <div style="display: block;">
+        <div class="card border-0" style="width: 18rem; height: 490px;">
+          <img src="{{ url_for('static', filename='images/vermifugo.jpeg') }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Vermífugos</h5>
+            <p class="card-text">Temos Vermífugos de todas as marcas, medidas, países e composições. Traga sua receita!</p>
+            <a href="#" class="btn btn-primary">Buscar mais</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Análise Clínica com imagem e descrição -->
+      <div style="display: block;">
+        <div class="card border-0" style="width: 18rem; height: 490px;">
+          <img src="{{ url_for('static', filename='images/antipulgas-e-carrapatos.jpeg') }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Antipulgas e Carrapatos</h5>
+            <p class="card-text">Seu pet está com pulgas ou carrapatos? Liberte-o desse tormento!</p>
+            <a href="#" class="btn btn-primary">Buscar mais</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fisioterapia com imagem e descrição -->
+      <div style="displ ay: block;">
+        <div class="card border-0" style="width: 18rem; height: 490px;">
+          <img src="{{ url_for('static', filename='images/antibiotico.jpeg') }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Antibióticos</h5>
+            <p class="card-text">Para toda e qualquer ocasião em que seu pet precisar, temos um antibiótico pronto!</p>
+            <a href="#" class="btn btn-primary">Buscar mais</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tratamento de Doenças com imagem e descrição -->
+      <div style="displ ay: block;">
+        <div class="card border-0" style="width: 18rem; height: 490px;">
+          <img src="{{ url_for('static', filename='images/anti-inflamatorio.png') }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Anti-inflamatórios</h5>
+            <p class="card-text">Seu pet sofre com inflamações? Nós temos a solução para qualquer situação!</p>
+            <a href="#" class="btn btn-primary">Buscar mais</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Cirurgia com imagem e descrição -->
+      <div style="displ ay: block;">
+        <div class="card border-0" style="width: 18rem; height: 490px;">
+          <img src="{{ url_for('static', filename='images/cardiaco.jpeg') }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cardíacos</h5>
+            <p class="card-text">Seu pet tem insuficiência cardíaca? Nós temos todos os melhores medicamentos do mercado.</p>
+            <a href="#" class="btn btn-primary">Buscar mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="Acessórios">
+      <h2>Acessórios</h2>
+      <div  class="flex-container">
+      
+        <!-- Banho/Tosa com imagem e descrição -->
+        <div style="display: block;">
+          <div class="card border-0" style="width: 18rem; height: 490px;">
+            <img src="{{ url_for('static', filename='images/vermifugo.jpeg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Vermífugos</h5>
+              <p class="card-text">Temos Vermífugos de todas as marcas, medidas, países e composições. Traga sua receita!</p>
+              <a href="#" class="btn btn-primary">Buscar mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Análise Clínica com imagem e descrição -->
+        <div style="display: block;">
+          <div class="card border-0" style="width: 18rem; height: 490px;">
+            <img src="{{ url_for('static', filename='images/antipulgas-e-carrapatos.jpeg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Antipulgas e Carrapatos</h5>
+              <p class="card-text">Seu pet está com pulgas ou carrapatos? Liberte-o desse tormento!</p>
+              <a href="#" class="btn btn-primary">Buscar mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fisioterapia com imagem e descrição -->
+        <div style="displ ay: block;">
+          <div class="card border-0" style="width: 18rem; height: 490px;">
+            <img src="{{ url_for('static', filename='images/antibiotico.jpeg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Antibióticos</h5>
+              <p class="card-text">Para toda e qualquer ocasião em que seu pet precisar, temos um antibiótico pronto!</p>
+              <a href="#" class="btn btn-primary">Buscar mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tratamento de Doenças com imagem e descrição -->
+        <div style="displ ay: block;">
+          <div class="card border-0" style="width: 18rem; height: 490px;">
+            <img src="{{ url_for('static', filename='images/anti-inflamatorio.png') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Anti-inflamatórios</h5>
+              <p class="card-text">Seu pet sofre com inflamações? Nós temos a solução para qualquer situação!</p>
+              <a href="#" class="btn btn-primary">Buscar mais</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Cirurgia com imagem e descrição -->
+        <div style="displ ay: block;">
+          <div class="card border-0" style="width: 18rem; height: 490px;">
+            <img src="{{ url_for('static', filename='images/cardiaco.jpeg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cardíacos</h5>
+              <p class="card-text">Seu pet tem insuficiência cardíaca? Nós temos todos os melhores medicamentos do mercado.</p>
+              <a href="#" class="btn btn-primary">Buscar mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+  <!--<footer style="background-color: black; width: 100vw; padding: 0; margin: 0;">
+    <div class="pages">
+      <ul>
+        <li> Login
+        <li> Cadastro
+        <li> Mapa do Site
+      </ul>
+    </div>
+    <div class="social">
+      <ul>
+        <li> Instagram
+        <li> YouTube
+        <li> Twitter
+      </ul>
+    </div>
+    <div class="contact">
+      <ul>
+        <li> WhatsApp
+        <li> E-mail
+        <li> Imprensa
+      </ul>
+    </div>
+  </footer>-->
+</html>

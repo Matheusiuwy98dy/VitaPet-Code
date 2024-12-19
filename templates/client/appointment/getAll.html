@@ -1,0 +1,7 @@
+{% for consulta in consultas %}
+    <p>ID Médico: {{consulta.id_medico}}</p>
+    <p>ID Pet: {{consulta.id_animal}}</p>
+    <p>Data: {{consulta.dataConsulta}}</p>
+    <p>Preço: R$ {{consulta.valor}}</p>
+    <hr>
+{% endfor %}
