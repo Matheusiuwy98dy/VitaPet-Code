@@ -9,4 +9,3 @@ Projeto desenvolvido para a matéria Projeto e Prática 2 ministrada por Luciano
 - Samuel Fortunato
 - Silvio Felipe 
 - Victor Leonardo
-- chatgpt
